@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love 2</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Dancing Script', cursive;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('d808a2d054dd553336dcc1f52be6aa9f-Picsart-AiImageEnhancer-Pic') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+    padding: 10px;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 48%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+    animation: floatUpDown 5s ease-in-out infinite;
+}
+
+/* Floating animation for videos */
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    bottom: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background: #ff6699;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 0, 102, 0.6);
+}
+
+.nav-btn:hover { background: #ff3366; }
+
+#prevBtn { left: 20px; }
+#nextBtn { right: 20px; }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <video src="edit1.mp4" autoplay loop muted></video>
+    <video src="edit2.mp4" autoplay loop muted></video>
+
+    <button id="prevBtn" class="nav-btn" onclick="goPrev()">◀ Previous</button>
+    <button id="nextBtn" class="nav-btn" onclick="goNext()">Next ▶</button>
+</div>
+
+<script>
+function goPrev() {
+    window.location.href = "love.html";
+}
+function goNext() {
+    window.location.href = "love3.html";
+}
+</script>
+
+</body>
+</html>
